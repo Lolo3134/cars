@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+}
+
+.menu_toggle {
+  position: absolute;
+  transform: translate(0, -50%);
+  height: 46px;
+  width: 46px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+
+  &, &:hover {
+    color: var(--white);
+  }
+}
+
+.menu_toggle_bar {
+  display: block;
+  position: absolute;
+  margin-top: -1px;
+  right: 0;
+  width: 26px;
+  height: 1px;
+  border-radius: 4px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+
+  &.menu_toggle_bar__top {
+    transform: translate(-35%, -4px);
+  }
+  &.menu_toggle_bar__bottom {
+    transform: translate(-35%, 4px);
+  }
+
+  .nav_open & {
+    &.menu_toggle_bar__top {
+      transform: translate(-35%, 0) rotate(45deg);
+    }
+    &.menu_toggle_bar__bottom {
+      transform: translate(-35%, 0) rotate(-45deg);
+    }
+  }
+}

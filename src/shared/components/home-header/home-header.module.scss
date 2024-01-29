@@ -2,14 +2,25 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  background: url("../../../assets/image/preview.webp") no-repeat;
+  background: url("../../../assets/image/preview.webp") no-repeat center;
   background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+    background-position: center -100px;
+    background-size: contain;
+  }
 }
 
 .wrapper {
   max-width: 1360px;
   width: 100%;
   margin: 83px auto 0;
+
+  @media screen and (max-width: 768px) {
+      margin: 0 15px;
+      padding: 83px 0 0;
+  }
 }
 
 .badge {
@@ -17,6 +28,12 @@
   font-size: 1.5rem;
   line-height: 120%;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    max-width: 282px;
+  }
 }
 
 .title {
@@ -26,6 +43,11 @@
   height: 308px;
   line-height: 110%;
   margin-bottom: 97px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+    height: 140px;
+  }
 }
 
 .description {
@@ -37,16 +59,33 @@
   gap: 80px;
   margin-bottom: 50px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    margin-bottom: 19px;
+  }
+
   img {
     max-width: 219px;
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+
+    @media screen and (max-width: 768px) {
+      align-self: center;
+      max-height: 116px;
+      max-width: 100%;
+    }
   }
 
   div {
     font-size: 1.5rem;
     line-height: 120%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   .link {
@@ -60,6 +99,10 @@
     text-decoration: none;
     padding: 19px 30px;
     border-radius: 50px;
+
+    @media screen and (max-width: 768px) {
+      align-self: flex-start;
+    }
   }
 }
 
@@ -67,4 +110,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }

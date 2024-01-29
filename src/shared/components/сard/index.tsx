@@ -7,7 +7,7 @@ interface Item {
   seats: string;
   mpg: string;
   model: string;
-  price: number;
+  price: string;
 }
 
 interface CardProps {

@@ -8,9 +8,9 @@ export const HomeHeader = () => {
   return (
     <div className={s.container}>
       <div className={s.wrapper}>
-        <span className={s.badge}>
+        <div className={s.badge}>
         Welcome to Easy Ride - Your Reliable Car Rental Partner in Miami
-        </span>
+        </div>
         <h1 className={s.title}>
           <Title />
         </h1>
@@ -26,7 +26,9 @@ export const HomeHeader = () => {
           </Link>
         </div>
         <div className={s.brands}>
-          <img src={'/Kia.png'} alt={'Kia'}/>
+          {window.innerWidth > 768 && (
+            <img src={'/Kia.png'} alt={'Kia'}/>
+          )}
           <img src={'/BMW.png'} alt={'BMW'}/>
           <img src={'/Ford.png'} alt={'Ford'}/>
           <img src={'/Mazda.png'} alt={'Mazda'}/>

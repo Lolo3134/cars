@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './navbar.module.scss';
 import { Link } from 'react-router-dom';
 import { Arrow } from 'shared/constants';
+import { ButtonMobileNav } from './components/button-mobile-nav';
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <div className={s.wrapper}>
       <Link to={'/'} className={s.logo}>
@@ -22,6 +25,9 @@ export const Navbar = () => {
             Login in
           </Link>
         </div>
+      </div>
+      <div className={s.mobile_nav}>
+        <ButtonMobileNav isOpen={isOpen} setIsOpen={setIsOpen}/>
       </div>
     </div>
   );

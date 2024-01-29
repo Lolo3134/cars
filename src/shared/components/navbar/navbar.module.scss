@@ -5,6 +5,10 @@
   align-items: center;
   margin: 40px auto 51px;
   gap: 50px;
+
+  @media screen and (max-width: 768px) {
+    margin: 30px 15px 0;
+  }
 }
 
 .logo {
@@ -12,6 +16,10 @@
   color: var(--white);
   text-decoration: none;
   line-height: 110%;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 
   &__bold {
     font-weight: 700;
@@ -27,6 +35,10 @@
   border-radius: 50px;
   border: 1px solid var(--border);
   padding: 10px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   nav {
     display: flex;
@@ -69,5 +81,13 @@
       color: var(--black);
       text-decoration: none;
     }
+  }
+}
+
+.mobile_nav {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 }
