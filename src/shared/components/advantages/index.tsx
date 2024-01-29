@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './advantages.module.scss';
-import { Car, Check, Shield } from 'shared/constants/icons';
+import { Car, Check } from 'shared/constants/icons';
 
 export const Advantages = () => {
   return (
@@ -34,7 +34,6 @@ export const Advantages = () => {
           </div>
           <div className={s.card}>
             <div className={s.card__top}>
-              <Shield />
               <p>003</p>
             </div>
             <div className={s.card_description}>

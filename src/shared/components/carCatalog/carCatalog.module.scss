@@ -1,0 +1,174 @@
+.container {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1440px;
+  }
+  
+  @media (max-width <= 768px) {
+    .container {
+        padding: 0 15px;
+    }
+  }
+  
+
+.catalog {
+    padding: 50px 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .car__catalog__title {
+    color: #fff;
+    font-size: 7vw;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
+  .wrapper .i {
+    height: 12px;
+    width: 36px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+
+  .wrapper .i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  
+  .catalog__card__swiper{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    padding: 60px 0 0;
+  }
+
+  .catalog__card__swiper p {
+    padding-right: 30px;
+  }
+
+  .swiper__line {
+    width: 100%;
+    border-bottom: 2px #fff solid;
+  }
+
+  .swiper__btn {
+    padding-left: 30px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 25px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .carousel .card {
+    scroll-snap-align: start;
+    max-width: 445px;
+    list-style: none;
+    border: 1px solid #FFFFFF40;
+    cursor: pointer;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .carousel :where(.card, .img) {
+    display: flex;
+  }
+  
+  
+  
+  .card__categories {
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .card__categories p {
+    padding: 9px 15px;
+    font-size: 16px;
+    border: 1px solid #FFFFFF40;
+    border-radius: 50px;
+    color: #fff;
+  }
+  
+  .carousel .card h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.56rem;
+  }
+
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+
+  .catalog__btn{
+    margin-top: 40px;
+    max-width: 130px;
+    padding: 20px 40px;
+    background-color: #A4C8FF;
+    color: black;
+    border-radius: 50px;
+  }
+  
+  @media screen and (width <= 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (width <= 600px) {
+    .car__catalog__title {
+        font-size: 13vw;
+        padding: 0 0 40px 20px;
+      }
+
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+
+    .catalog__card__swiper p {
+        padding-right: 15px;
+      }
+
+      .swiper__btn{
+        padding-left: 15px;
+      }
+
+      .swiper__line{
+        width: 85%;
+      }
+  }
