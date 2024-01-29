@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "inlineSources": true,
+    // Set `sourceRoot` to  "/" to strip the build path prefix from
+    "sourceRoot": "/",
+
+    "noImplicitAny": true,
     "jsx": "react-jsx",
-
-    /* Linting */
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "target": "ES5",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "app/*": ["app/*"],
+      "pages/*": ["pages/*"],
+      "shared/*": ["shared/*"],
+    }
+  }
 }
