@@ -21,6 +21,7 @@
       "app/*": ["app/*"],
       "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
+      "modules/*": ["modules/*"],
     }
   }
 }
