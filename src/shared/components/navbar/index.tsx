@@ -3,6 +3,7 @@ import s from './navbar.module.scss';
 import { Link } from 'react-router-dom';
 import { Arrow } from 'shared/constants';
 import { ButtonMobileNav } from './components/button-mobile-nav';
+import { MobileNav } from 'shared/components/navbar/components/mobile-nav';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,7 @@ export const Navbar = () => {
       </div>
       <div className={s.mobile_nav}>
         <ButtonMobileNav isOpen={isOpen} setIsOpen={setIsOpen}/>
+        {isOpen && <MobileNav setIsOpen={setIsOpen} />}
       </div>
     </div>
   );

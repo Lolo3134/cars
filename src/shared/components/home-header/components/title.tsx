@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Typewriter from 'typewriter-effect';
 
-export const Title = () => {
+interface TitleProps {
+  value: string;
+}
+
+export const Title: FC<TitleProps> = ({ value }) => {
   return (
     <Typewriter
       options={{
-        strings: ['Easy Ride – is for Freedom'],
+        strings: [value],
         autoStart: true,
         loop: true,
         delay: 300,

@@ -25,7 +25,7 @@ export const Advantages = () => {
           </div>
           <div className={s.card}>
             <div className={s.card__top}>
-              <Check />
+              <Check/>
               <p>002</p>
             </div>
             <div className={s.card_description}>
@@ -51,6 +51,20 @@ export const Advantages = () => {
         <span> rental </span>
         experience
         <span> simple and enjoyable.</span>
+      </div>
+      <div className={s.description__mobile}>
+        <div>
+          Your Perfect Journey Starts Here Choose your car
+          <span> right now and enjoy an unforgettable journey </span>
+          through Miami<span>.</span>
+        </div>
+        <div>
+          <span>We&apos;re here to </span>
+          make your
+          <span> rental </span>
+          experience
+          <span> simple and enjoyable.</span>
+        </div>
       </div>
     </section>
   );

@@ -1,10 +1,11 @@
+* {
+  scrollbar-width: thin;
+}
+
 body {
   background: var(--black);
-  font-family: 'DM sans', 'sans-serif';
+  font-family: 'DM sans', sans-serif;
   font-weight: 400;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
   font-size: 1rem;
   color: var(--white);

@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { Arrow } from 'shared/constants/icons';
 
 export const HomeHeader = () => {
+  const title = 'Easy Ride – is for Freedom';
+  const title_mobile = 'Easy Ride – is Freedom';
+
   return (
     <div className={s.container}>
       <div className={s.wrapper}>
@@ -12,7 +15,7 @@ export const HomeHeader = () => {
         Welcome to Easy Ride - Your Reliable Car Rental Partner in Miami
         </div>
         <h1 className={s.title}>
-          <Title />
+          <Title value={window.innerWidth > 768 ? title : title_mobile}/>
         </h1>
         <div className={s.description}>
           <img src={'/description_car.webp'} alt={'car'}/>

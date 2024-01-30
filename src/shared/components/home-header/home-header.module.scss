@@ -7,7 +7,7 @@
 
   @media screen and (max-width: 768px) {
     max-width: 768px;
-    background-position: center -100px;
+    background-position: center -25px;
     background-size: contain;
   }
 }
@@ -18,8 +18,8 @@
   margin: 83px auto 0;
 
   @media screen and (max-width: 768px) {
-      margin: 0 15px;
-      padding: 83px 0 0;
+      margin: 0;
+      padding: 83px 15px 0;
   }
 }
 
