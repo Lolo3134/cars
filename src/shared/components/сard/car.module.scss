@@ -100,6 +100,10 @@
     border-radius: 30px;
   }
 
+  .card:hover {
+    border: 1px solid #fff;
+  }
+
 
   .carousel.dragging .card {
     cursor: grab;
@@ -145,6 +149,16 @@
     background-color: #A4C8FF;
     color: black;
     border-radius: 50px;
+    transform: translateY(-10%);
+    transition: transform 0.1s linear;
+  }
+
+  .catalog__btn:active{
+    transform: translateY(-10%) scale(0.85);
+  }
+  .catalog__btn:hover{
+    transform: translateY(-5%) scale(0.95);
+    border: #fff 2px solid;
   }
   
   @media screen and (width <= 900px) {
