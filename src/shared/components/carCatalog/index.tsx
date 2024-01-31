@@ -71,8 +71,8 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
           <p>03/24</p>
           <div className={s.swiper__line}></div>
           <div className={s.swiper__btn}>
-            <img onClick={() => handleArrowClick('left')} id="left" src='/arrow2.svg' className={s.i +  s.catalog__left} />
-            <img onClick={() => handleArrowClick('right')} id="right" src='/arrow1.svg' className={s.i + s.catalog__right} />
+            <img onClick={() => handleArrowClick('left')} id="left" src='/arrow2.svg' className={s.i} />
+            <img onClick={() => handleArrowClick('right')} id="right" src='/arrow1.svg' className={s.i} />
           </div>
         </div>
       </div>
