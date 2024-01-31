@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Card from 'shared/components/сard';
+import s from './catalog.module.scss';
+import CustomSelect from 'shared/components/select';
 
-// Константы
 const brands = ['Toyota', 'Honda', 'Mazda'];
-const categories = ['All', 'Manual', 'Automatic'];
-const seats = ['All', '2 Seats', '4 Seats', '5 Seats'];
-const mpgs = ['All', '28 MPG', '30 MPG', '34 MPG'];
+const categories = ['Filter 001', 'Manual', 'Automatic'];
+const seats = ['Filter 002', '2 Seats', '4 Seats', '5 Seats'];
+const mpgs = ['Filter 003', '28 MPG', '30 MPG', '34 MPG'];
 
-// Моковые данные
 const items: Item[] = [
   {
     id: 1,
@@ -42,56 +42,59 @@ const items: Item[] = [
 
 ];
 
-// Компонент фильтра
-const Filter: React.FC<{ options: string[], selected: string, setSelected: (value: string) => void }> = ({ options, selected, setSelected }) => (
-  <select value={selected} onChange={e => setSelected(e.target.value)}>
-    {options.map(option => (
-      <option key={option} value={option}>{option}</option>
-    ))}
-  </select>
-);
+// const Filter: React.FC<{ options: string[], selected: string, setSelected: (value: string) => void }> = ({ options, selected, setSelected }) => (
+//   <select value={selected} className={s.filter__item} onChange={e => setSelected(e.target.value)}>
+//     {options.map(option => (
+//       <option key={option} value={option}>{option}</option>
+//     ))}
+//   </select>
+// );
 
-// Компонент CatalogPage
 const CatalogPage: React.FC = () => {
-  // Состояния
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSeats, setSelectedSeats] = useState('All');
-  const [selectedMpg, setSelectedMpg] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Filter 001');
+  const [selectedSeats, setSelectedSeats] = useState('Filter 002');
+  const [selectedMpg, setSelectedMpg] = useState('Filter 003');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Обработчики
   const handleTagClick = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
   };
 
-  // Фильтрация
   const filteredItems = items.filter(item => 
     (selectedBrands.length > 0 ? selectedBrands.includes(item.brand) : true) &&
-    (selectedCategory !== 'All' ? item.category === selectedCategory : true) &&
-    (selectedSeats !== 'All' ? item.seats === selectedSeats : true) &&
-    (selectedMpg !== 'All' ? item.mpg === selectedMpg : true) &&
+    (selectedCategory !== 'Filter 001' ? item.category === selectedCategory : true) &&
+    (selectedSeats !== 'Filter 002' ? item.seats === selectedSeats : true) &&
+    (selectedMpg !== 'Filter 003' ? item.mpg === selectedMpg : true) &&
     (searchTerm !== '' ? item.model.toLowerCase().includes(searchTerm.toLowerCase()) : true)
   );
-
-  // Рендер
+  
   return (
     <div>
-      {brands.map((brand, index) => (
-        <button key={index} onClick={() => handleTagClick(brand)}>
-          {brand}
-        </button>
-      ))}
+      <div className={s.container}>
+        <div className={s.filter__title}>
+          <h1>Book your perfect car</h1>
+        </div>
+        <div className={s.catalog__tags}>
+          {brands.map((brand, index) => (
+            <button key={index} onClick={() => handleTagClick(brand)}>
+              {brand}
+            </button>
+          ))}
+        </div>
+        <div className={s.filter__car}>
 
-      <Filter options={categories} selected={selectedCategory} setSelected={setSelectedCategory} />
-      <Filter options={seats} selected={selectedSeats} setSelected={setSelectedSeats} />
-      <Filter options={mpgs} selected={selectedMpg} setSelected={setSelectedMpg} />
-
-      <input type="text" placeholder="Search by model" onChange={e => setSearchTerm(e.target.value)} />
-
-      {filteredItems.map(item => (
-        <Card key={item.id} item={item} />
-      ))}
+          <CustomSelect options={categories} selected={selectedCategory} setSelected={setSelectedCategory} />
+          <CustomSelect options={seats} selected={selectedSeats} setSelected={setSelectedSeats} />
+          <CustomSelect options={mpgs} selected={selectedMpg} setSelected={setSelectedMpg} />
+          <input type="text" placeholder="Car Search" className={s.filter__input} onChange={e => setSearchTerm(e.target.value)} />
+        </div>
+        <div className={s.catalog__car}>
+          {filteredItems.map(item => (
+            <Card key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
