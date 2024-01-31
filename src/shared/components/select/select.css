@@ -50,7 +50,7 @@
       top: 100%; left: 0; right: 0;
       min-width: 100%;
       margin: 15px 0;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #fff;
       border-radius: 4px;
       box-sizing: border-box;
       /* stylelint-disable-next-line alpha-value-notation */
@@ -94,10 +94,9 @@
         position: relative;
         display: block;
         padding: 0 22px;
-        border-bottom: 1px solid #b5b5b5;
-        font-size: 18px;
-        font-weight: 600;
-        color: #b5b5b5;
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
         line-height: 47px;
         cursor: pointer;
         transition: all .4s ease-in-out;

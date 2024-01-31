@@ -3,7 +3,7 @@ import Card from 'shared/components/сard';
 import s from './catalog.module.scss';
 import CustomSelect from 'shared/components/select';
 
-const brands = ['Toyota', 'Honda', 'Mazda'];
+const brands = ['Toyota', 'Honda', 'Mazda', 'BMW', 'Audi', 'Mercedes', 'Volkswagen', 'Ford', 'Chevrolet', 'Dodge'];
 const categories = ['Filter 001', 'Manual', 'Automatic'];
 const seats = ['Filter 002', '2 Seats', '4 Seats', '5 Seats'];
 const mpgs = ['Filter 003', '28 MPG', '30 MPG', '34 MPG'];
@@ -31,6 +31,66 @@ const items: Item[] = [
   },
   {
     id: 3,
+    image: '/images/img-3.svg',
+    category: 'Manual',
+    seats: '2 Seats',
+    mpg: '28 MPG',
+    model: 'Mazda MX-5 Miata',
+    price: '30.00',
+    brand: 'Mazda',
+  },
+  {
+    id: 4,
+    image: '/images/img-1.svg',
+    category: 'Manual',
+    seats: '5 Seats',
+    mpg: '34 MPG',
+    model: 'Toyota New Yaris',
+    price: '22.47',
+    brand: 'Toyota',
+  },
+  {
+    id: 5,
+    image: '/images/img-2.svg',
+    category: 'Automatic',
+    seats: '4 Seats',
+    mpg: '30 MPG',
+    model: 'Honda Civic',
+    price: '25.00',
+    brand: 'Honda',
+  },
+  {
+    id: 6,
+    image: '/images/img-3.svg',
+    category: 'Manual',
+    seats: '2 Seats',
+    mpg: '28 MPG',
+    model: 'Mazda MX-5 Miata',
+    price: '30.00',
+    brand: 'Mazda',
+  },
+  {
+    id: 7,
+    image: '/images/img-1.svg',
+    category: 'Manual',
+    seats: '5 Seats',
+    mpg: '34 MPG',
+    model: 'Toyota New Yaris',
+    price: '22.47',
+    brand: 'Toyota',
+  },
+  {
+    id: 8,
+    image: '/images/img-2.svg',
+    category: 'Automatic',
+    seats: '4 Seats',
+    mpg: '30 MPG',
+    model: 'Honda Civic',
+    price: '25.00',
+    brand: 'Honda',
+  },
+  {
+    id: 9,
     image: '/images/img-3.svg',
     category: 'Manual',
     seats: '2 Seats',
