@@ -56,7 +56,7 @@ const CatalogPage: React.FC = () => {
   const [selectedSeats, setSelectedSeats] = useState('Filter 002');
   const [selectedMpg, setSelectedMpg] = useState('Filter 003');
   const [searchTerm, setSearchTerm] = useState('');
-
+   
   const handleTagClick = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
   };
@@ -77,13 +77,19 @@ const CatalogPage: React.FC = () => {
         </div>
         <div className={s.catalog__tags}>
           {brands.map((brand, index) => (
-            <button key={index} onClick={() => handleTagClick(brand)}>
+            <button
+              key={index}
+              style={{
+                backgroundColor: selectedBrands.includes(brand) ? '#ffffff' : '',
+                color: selectedBrands.includes(brand) ? '#000000' : '',
+              }}
+              onClick={() => handleTagClick(brand)}
+            >
               {brand}
             </button>
           ))}
         </div>
         <div className={s.filter__car}>
-
           <CustomSelect options={categories} selected={selectedCategory} setSelected={setSelectedCategory} />
           <CustomSelect options={seats} selected={selectedSeats} setSelected={setSelectedSeats} />
           <CustomSelect options={mpgs} selected={selectedMpg} setSelected={setSelectedMpg} />

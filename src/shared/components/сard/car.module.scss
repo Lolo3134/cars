@@ -114,6 +114,7 @@
   
   .card__categories {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 20px 0;
   }
@@ -174,3 +175,15 @@
         width: 85%;
       }
   }
+
+  @media (min-width: 1100px) and (max-width: 1440px) {
+    .card {
+      max-width: 30vw;
+    }
+   }
+
+   @media (min-width: 768px) and (max-width: 1110px) {
+    .card {
+      max-width: 44vw;
+    }
+   }
