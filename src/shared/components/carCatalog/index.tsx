@@ -1,19 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../сard';
 import s from './carCatalog.module.scss';
-
-interface Item {
- id: number;
- image: string;
- category: string;
- seats: string;
- mpg: string;
- model: string;
- price: string;
-}
-
+import { Car } from 'shared/components/carCatalog/car-catalog.types';
 interface CarouselProps {
- items: Item[];
+ items: Car[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
@@ -81,7 +71,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 };
 
 const Catalog: React.FC = () => {
-  const items: Item[] = [
+  const items: Car[] = [
     {
       id: 1,
       image: '/images/img-1.svg',

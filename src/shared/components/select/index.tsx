@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, RefObject } from 'react';
 import './select.css';
 
 interface CustomSelectProps {
@@ -9,7 +9,7 @@ interface CustomSelectProps {
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ options, selected, setSelected }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef(null);
+  const ref: RefObject<HTMLDivElement> = useRef(null);
 
   const handleClickOutside = (event: MouseEvent) => {
     if (ref.current && !ref.current.contains(event.target as Node)) {

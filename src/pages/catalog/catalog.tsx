@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Card from 'shared/components/сard';
 import s from './catalog.module.scss';
 import CustomSelect from 'shared/components/select';
+import { Car } from 'shared/components/carCatalog/car-catalog.types';
 
 const brands = ['Toyota', 'Honda', 'Mazda', 'BMW', 'Audi', 'Mercedes', 'Volkswagen', 'Ford', 'Chevrolet', 'Dodge'];
 const categories = ['Filter 001', 'Manual', 'Automatic'];
 const seats = ['Filter 002', '2 Seats', '4 Seats', '5 Seats'];
 const mpgs = ['Filter 003', '28 MPG', '30 MPG', '34 MPG'];
 
-const items: Item[] = [
+const items: Car[] = [
   {
     id: 1,
     image: '/images/img-1.svg',
@@ -121,13 +122,15 @@ const CatalogPage: React.FC = () => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
   };
 
-  const filteredItems = items.filter(item => 
-    (selectedBrands.length > 0 ? selectedBrands.includes(item.brand) : true) &&
-    (selectedCategory !== 'Filter 001' ? item.category === selectedCategory : true) &&
-    (selectedSeats !== 'Filter 002' ? item.seats === selectedSeats : true) &&
-    (selectedMpg !== 'Filter 003' ? item.mpg === selectedMpg : true) &&
-    (searchTerm !== '' ? item.model.toLowerCase().includes(searchTerm.toLowerCase()) : true)
-  );
+  const filteredItems = items.filter(item => {
+    if (item.brand) {
+      (selectedBrands.length > 0 ? selectedBrands.includes(item!.brand) : true) &&
+      (selectedCategory !== 'Filter 001' ? item.category === selectedCategory : true) &&
+      (selectedSeats !== 'Filter 002' ? item.seats === selectedSeats : true) &&
+      (selectedMpg !== 'Filter 003' ? item.mpg === selectedMpg : true) &&
+      (searchTerm !== '' ? item.model.toLowerCase().includes(searchTerm.toLowerCase()) : true);
+    }
+  });
   
   return (
     <div>
