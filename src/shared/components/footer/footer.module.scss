@@ -15,11 +15,13 @@ $color_1: #fff;
 #footer {
 	padding: 40px 0;
 }
+
 .footer__container {
 	display: grid;
 	gap: 10px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .footer__item {
 	display: grid;
 	align-content: space-between;
@@ -28,34 +30,41 @@ $color_1: #fff;
 	border: 1px solid #FFFFFF40;
 	border-radius: 30px;
 }
+
 .footer__item__name {
 	color: $color_1;
 	font-size: 32px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
+
 	img {
 		width: 20px;
 		height: 15px;
 	}
 }
+
 @media (width <= 1024px) {
 	.footer__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
+
 	.footer__item {
 		height: 32vw;
 	}
 }
+
 @media (width <= 768px) {
 	.footer__item {
 		height: 175px;
 		padding: 20px;
 	}
+
 	.footer__item__name {
 		font-size: 16px;
 	}
+
 	.icone {
 		width: 43px;
 		height: 43px;
