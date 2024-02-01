@@ -10,9 +10,6 @@
     }
   }
   
-
-.catalog {
-  }
   
   .wrapper {
     width: 100%;
@@ -27,7 +24,7 @@
     padding: 0 0 60px;
   }
 
-  .wrapper .i {
+  .i {
     height: 12px;
     width: 36px;
     cursor: pointer;
@@ -36,7 +33,7 @@
     transition: transform 0.1s linear;
   }
 
-  .wrapper .i:active{
+  .i:active{
     transform: translateY(-50%) scale(0.85);
   }
   

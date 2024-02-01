@@ -13,6 +13,9 @@ export const routes = {
   registration: '/' + Routes.Registration,
   auth: '/' + Routes.Auth,
 
+  // Каталог
+  catalog: '/' + Routes.Catalog,
+
   // Профиль
   profile: '/' + Routes.Profile,
   resetPassword: '/' + Routes.ResetPassword,

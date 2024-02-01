@@ -18,14 +18,12 @@ $background-color_2: black;
 .info__main {
 	padding-top: 60px;
 }
-
 .info__container {
 	background-color: $background-color_1;
 	padding: 40px;
 	border-radius: 40px;
 	max-width: 1360px;
 }
-
 .info__title {
 	h1 {
 		color: $color_1;
@@ -33,14 +31,12 @@ $background-color_2: black;
 		max-width: 1150px;
 	}
 }
-
 .info__block {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	gap: 10px;
 }
-
 .info__block__btn {
 	width: 188px;
 	height: 60px;
@@ -49,11 +45,9 @@ $background-color_2: black;
 	background-color: $background-color_2;
 	border-radius: 50px;
 }
-
 .info__br {
 	display: none;
 }
-
 .info__none {
 	display: none;
 	width: 188px;
@@ -63,7 +57,6 @@ $background-color_2: black;
 	background-color: $background-color_2;
 	border-radius: 50px;
 }
-
 .info__block__right {
 	p {
 		color: $color_1;
@@ -73,21 +66,17 @@ $background-color_2: black;
 		padding: 100px 0 30px;
 	}
 }
-
 .info__block__right__images {
 	display: flex;
 	gap: 10px;
-
 	img {
 		max-width: 28vw;
 	}
 }
-
 @media (width <= 768px) {
 	.car_none {
 		display: none;
 	}
-
 	.info__block__right__images {
 		img {
 			max-width: none;
@@ -95,33 +84,29 @@ $background-color_2: black;
 		}
 	}
 }
-
 @media (width <= 568px) {
 	.info__none {
 		display: block;
 	}
-
 	.info__block__btn {
 		display: none;
 	}
-
 	.info__br {
 		display: block;
 	}
-
 	.info__block__right__images {
 		flex-wrap: wrap;
 		padding-top: 150px;
 	}
-
+	.info__block__right p {
+		padding: 20px 0 0 0;
+	}
 	.info__container {
 		padding: 20px;
 	}
-
 	.info__block {
 		gap: 0;
 	}
-
 	.info__title {
 		h1 {
 			font-size: 12vw;
