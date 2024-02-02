@@ -70,7 +70,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   );
 };
 
-const Catalog: React.FC = () => {
+interface NameProps {
+  name: string;
+}
+
+const Catalog: React.FC<NameProps> = ({ name }) => {
   const items: Car[] = [
     {
       id: 1,
@@ -131,7 +135,7 @@ const Catalog: React.FC = () => {
   return (
     <section className={s.catalog}>
       <div className={s.wrapper}>
-        <h1 className={s.car__catalog__title}>Car catalog</h1>
+        <h1 className={s.car__catalog__title}>{name}</h1>
         <Carousel items={items} />
       </div>
     </section>
