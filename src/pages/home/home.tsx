@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <HomeHeader />
       <Advantages />
-      <Catalog />
+      <Catalog name='Car catalog'/>
       <InfoMain />
       <ContactMain />
       <Footer />

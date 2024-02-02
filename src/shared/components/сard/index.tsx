@@ -1,17 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './car.module.scss';
-
-interface Item {
-  image: string;
-  category: string;
-  seats: string;
-  mpg: string;
-  model: string;
-  price: string;
-}
+import { Car } from 'shared/components/carCatalog/car-catalog.types';
 
 interface CardProps {
-  item: Item;
+ item: Car;
 }
 
 const Card: React.FC<CardProps> = ({ item }) => {
@@ -25,7 +18,9 @@ const Card: React.FC<CardProps> = ({ item }) => {
       </div>
       <h2>{item.model}</h2>
       <span>From $ {item.price} per day</span>
-      <button className={s.catalog__btn}>Select</button>
+      <Link to={`/cars/${item.id}`}>
+        <button className={s.catalog__btn}>Select</button>
+      </Link>
     </div>
   );
 };

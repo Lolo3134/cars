@@ -3,6 +3,8 @@ import Card from 'shared/components/сard';
 import s from './catalog.module.scss';
 import CustomSelect from 'shared/components/select';
 import { Car } from 'shared/components/carCatalog/car-catalog.types';
+import ContactMain from 'shared/components/contactMain';
+import Footer from 'shared/components/footer';
 
 const brands = ['Toyota', 'Honda', 'Mazda', 'BMW', 'Audi', 'Mercedes', 'Volkswagen', 'Ford', 'Chevrolet', 'Dodge'];
 const categories = ['Filter 001', 'Manual', 'Automatic'];
@@ -122,18 +124,16 @@ const CatalogPage: React.FC = () => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
   };
 
-  const filteredItems = items.filter(item => {
-    if (item.brand) {
-      (selectedBrands.length > 0 ? selectedBrands.includes(item!.brand) : true) &&
-      (selectedCategory !== 'Filter 001' ? item.category === selectedCategory : true) &&
-      (selectedSeats !== 'Filter 002' ? item.seats === selectedSeats : true) &&
-      (selectedMpg !== 'Filter 003' ? item.mpg === selectedMpg : true) &&
-      (searchTerm !== '' ? item.model.toLowerCase().includes(searchTerm.toLowerCase()) : true);
-    }
-  });
+  const filteredItems = items.filter(item => 
+    (selectedBrands.length > 0 ? selectedBrands.includes(item.brand as string) : true) &&
+    (selectedCategory !== 'Filter 001' ? item.category === selectedCategory : true) &&
+    (selectedSeats !== 'Filter 002' ? item.seats === selectedSeats : true) &&
+    (selectedMpg !== 'Filter 003' ? item.mpg === selectedMpg : true) &&
+    (searchTerm !== '' ? item.model.toLowerCase().includes(searchTerm.toLowerCase()) : true)
+  );
   
   return (
-    <div>
+    <>
       <div className={s.container}>
         <div className={s.filter__title}>
           <h1>Book your perfect car</h1>
@@ -163,8 +163,10 @@ const CatalogPage: React.FC = () => {
             <Card key={item.id} item={item} />
           ))}
         </div>
+        <ContactMain />
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
