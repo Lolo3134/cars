@@ -9,7 +9,7 @@ $background-color_2: black;
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (width <= 768px) {
     .container {
         padding: 0 15px;
     }

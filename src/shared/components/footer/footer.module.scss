@@ -6,7 +6,7 @@ $color_1: #fff;
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (width <= 768px) {
     .container {
         padding: 0 15px;
     }
@@ -26,6 +26,7 @@ $color_1: #fff;
 	display: grid;
 	align-content: space-between;
 	height: 21vw;
+	max-height: 333px;
 	padding: 40px;
 	border: 1px solid #FFFFFF40;
 	border-radius: 30px;

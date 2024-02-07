@@ -7,7 +7,7 @@ $color_2: #FFF6;
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (width <= 768px) {
     .container {
         padding: 0 15px;
     }
@@ -49,6 +49,13 @@ $color_2: #FFF6;
 h1 {
 	p {
 		font-size: 4.5vw;
+	}
+}
+
+@media (width >= 1920px) {
+
+	.contact__block__right {
+		font-size: 64px;
 	}
 }
 

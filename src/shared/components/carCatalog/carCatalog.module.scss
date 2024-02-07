@@ -10,7 +10,6 @@
     }
   }
   
-  
   .wrapper {
     width: 100%;
     position: relative;
@@ -23,6 +22,8 @@
     margin: 0 auto;
     padding: 0 0 60px;
   }
+
+
 
   .i {
     height: 12px;
@@ -139,6 +140,16 @@
     color: black;
     border-radius: 50px;
   }
+
+  @media screen and (width >= 1920px) {
+    .car__catalog__title {
+        font-size: 100px;
+      }
+
+      .wrapper .carousel{
+        grid-auto-columns: calc(20%);
+      }
+    }
   
   @media screen and (width <= 900px) {
     .wrapper .carousel {

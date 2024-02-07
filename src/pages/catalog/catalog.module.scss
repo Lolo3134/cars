@@ -28,12 +28,20 @@
       padding: 0 0 60px;
     }
 
+    @media screen and (width >= 1920px) {
+
+      .filter__title {
+        font-size: 100px;
+      }
+      }
+
     @media screen and (width <= 600px) {
       .car__catalog__title {
           font-size: 13vw;
           padding: 0 0 40px 20px;
         }
       }
+
 
   .filter__item {
    padding: 9px 20px 9px 20px;
@@ -78,6 +86,15 @@
     gap: 12px;
     justify-content: space-between;
    }
+
+   @media screen and (width >= 1920px) {
+    .car__catalog__title {
+        font-size: 100px;
+      }
+      .wrapper .carousel{
+        grid-auto-columns: calc(20%);
+      }
+    }
    
    @media (max-width: 500px) {
     .catalog__car {
