@@ -5,13 +5,16 @@ import './reset.css';
 import './App.css';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { StoreProvider } from 'app/providers/store/ui/StoreProvider';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <StoreProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StoreProvider>
 );
 

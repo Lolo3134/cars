@@ -1,7 +1,12 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query';
-import { BASE_URL_USERS, REGISTER } from 'app/providers/store/endpoints';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { BASE_URL_USERS, REGISTER, VERIFY_EMAIL } from 'app/providers/store/endpoints';
 import { Method } from 'app/providers/store/types';
-import { RegistrationApiProps, RegistrationApiResponse } from 'app/providers/store/api/registration/registration.types';
+import {
+  RegistrationApiProps,
+  RegistrationApiResponse,
+  VerifyApiProps
+} from 'app/providers/store/api/registration/registration.types';
+import { BaseQueryArg } from '@reduxjs/toolkit/dist/query/baseQueryTypes';
 
 export const registerApi = createApi({
   reducerPath: 'registerApi',
@@ -10,13 +15,20 @@ export const registerApi = createApi({
   }),
   endpoints: builder => ({
     register: builder.mutation<RegistrationApiResponse, RegistrationApiProps>({
-      query: data => ({
+      query: ({ email, password }) => ({
         url: REGISTER,
-        body: data,
+        body: { email, password },
+        method: Method.Post,
+      }),
+    }),
+    verify: builder.mutation<RegistrationApiResponse, VerifyApiProps>({
+      query: ({ email, verify_code })=> ({
+        url: VERIFY_EMAIL,
+        body: { email, verify_code },
         method: Method.Post,
       }),
     }),
   }),
 });
 
-export const { useRegisterMutation } = registerApi;
+export const { useRegisterMutation, useVerifyMutation } = registerApi;

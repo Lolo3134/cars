@@ -1,2 +1,2 @@
-export { HomeAsync } from 'pages/home/home.async';
-export { RegistrationAsynk } from 'pages/registration/registration.asynk';
+export { HomeAsync } from './home/home.async';
+export { AuthAsync } from './auth/auth.async';

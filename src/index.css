@@ -3,7 +3,11 @@
   --white: #fff;
   --border: #ffffff40;
   --blue: #a4c8ff;
-  --grey: #fff6;
+  --grey-light: #ffffffe6;
+  --grey-100: #fff6;
+  --grey-200: #ffffff14;
+  --primary: #ceef8f;
+  --error: #ff453a;
 }
 
 @font-face {

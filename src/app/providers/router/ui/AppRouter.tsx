@@ -2,7 +2,8 @@ import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routes } from 'shared/constants';
 import { Header } from 'shared/components';
-import { HomeAsync, RegistrationAsynk } from 'pages';
+import { HomeAsync } from 'pages';
+import { AuthAsync } from 'pages/auth/auth.async';
 
 export const AppRouter = () => {
   return (
@@ -10,7 +11,7 @@ export const AppRouter = () => {
       <Header />
       <Routes>
         <Route path={routes.home} element={<HomeAsync/>}/>
-        <Route path={routes.registration} element={<RegistrationAsynk />} />
+        <Route path={routes.auth} element={<AuthAsync />}/>
       </Routes>
     </Suspense>
   );

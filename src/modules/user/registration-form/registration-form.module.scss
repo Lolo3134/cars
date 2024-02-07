@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  border: 1px solid #191919;
+  border-radius: 50px;
+  padding: 19px 30px;
+  max-width: 480px;
+  width: 100%;
+  background: #191919;
+  font-size: 1rem;
+  line-height: 135%;
+  color: var(--white);
+  height: 60px;
+
+  &::placeholder {
+    font-size: 1rem;
+    line-height: 135%;
+    color: var(--white);
+  }
+}
+
+.create {
+  margin-top: 40px;
+  background: var(--primary);
+  max-width: 480px;
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  padding: 9px 20px;
+  color: var(--black);
+  line-height: 135%;
+}
+
+.valid_error {
+  color: var(--error);
+}

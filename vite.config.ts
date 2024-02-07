@@ -10,7 +10,7 @@ export default defineConfig({
       assets: '/src/assets',
       shared: '/src/shared',
       app: '/src/app',
-      modules: 'src/modules'
+      modules: '/src/modules'
     }
   },
   // css: {
