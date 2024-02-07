@@ -28,6 +28,16 @@
     padding: 0 0 60px;
   }
 
+  @media screen and (width >= 1920px) {
+    .car__catalog__title {
+        font-size: 100px;
+      }
+      .wrapper .carousel{
+        grid-auto-columns: calc(20%);
+      }
+    }
+
+
   .wrapper .i {
     height: 12px;
     width: 36px;

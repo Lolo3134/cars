@@ -5,6 +5,7 @@ import CarBlock from 'shared/components/carBlock';
 import ContactMain from 'shared/components/contactMain';
 import Footer from 'shared/components/footer';
 import Catalog from 'shared/components/carCatalog';
+import Slider from 'shared/components/carSlider';
 
 // const car: Car = 
 //   {
@@ -25,9 +26,9 @@ const CarDetailsPage: React.FC = () => {
         <div className={s.car__title}>
           <h1>Book your perfect car</h1>
         </div>
-        <div className={s.car__image}>
-          <img className={s.car__img} src="/carTitle.jpg" alt="" />
-        </div>
+      </div>
+      <Slider images={['/slider1.png', '/slider2.png', '/slider3.png']} />
+      <div className={s.container}>
         <div className={s.car__tags}>
           <div className={s.car__tag}>Premium Gas Only</div>
           <div className={s.car__tag}>Apple Car play</div>
@@ -96,10 +97,8 @@ const CarDetailsPage: React.FC = () => {
       <div className={s.more__cars}>
         <Catalog name='More cars'/>
       </div>
-      <div className={s.container}>
-        <ContactMain />
-        <Footer />
-      </div>
+      <ContactMain />
+      <Footer />
     </>
   );
 };

@@ -105,14 +105,6 @@ const items: Car[] = [
 
 ];
 
-// const Filter: React.FC<{ options: string[], selected: string, setSelected: (value: string) => void }> = ({ options, selected, setSelected }) => (
-//   <select value={selected} className={s.filter__item} onChange={e => setSelected(e.target.value)}>
-//     {options.map(option => (
-//       <option key={option} value={option}>{option}</option>
-//     ))}
-//   </select>
-// );
-
 const CatalogPage: React.FC = () => {
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('Filter 001');
@@ -163,9 +155,9 @@ const CatalogPage: React.FC = () => {
             <Card key={item.id} item={item} />
           ))}
         </div>
-        <ContactMain />
-        <Footer />
       </div>
+      <ContactMain />
+      <Footer />
     </>
   );
 };
