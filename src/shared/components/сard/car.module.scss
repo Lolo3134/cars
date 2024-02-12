@@ -157,18 +157,19 @@
     margin-top: 40px;
     max-width: 130px;
     padding: 20px 40px;
-    background-color: #A4C8FF;
+    background-color: #CEEF8F;
+    border: 2px #CEEF8F solid;
     color: black;
     border-radius: 50px;
-    transform: translateY(-10%);
+    // transform: translateY(-10%);
     transition: transform 0.1s linear;
   }
 
   .catalog__btn:active{
-    transform: translateY(-10%) scale(0.85);
+    transform: scale(0.85);
   }
   .catalog__btn:hover{
-    transform: translateY(-5%) scale(0.95);
+    transform: scale(0.95);
     border: #fff 2px solid;
   }
   

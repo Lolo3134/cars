@@ -51,7 +51,7 @@
   }
 
   input.filter__input {
-   border: none;
+   border: 1px #000 solid;
    border-radius: 30px;
    width: 100%;
    padding: 9px 4px 9px 40px;
@@ -60,6 +60,7 @@
 
  input.filter__input:hover {
   border: 1px #fff solid;
+  
 }
 
  .catalog__tags {
