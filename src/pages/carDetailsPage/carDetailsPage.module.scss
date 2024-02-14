@@ -147,6 +147,18 @@
     max-width: 400px;
   }
 
+  .carForm__img {
+    position: relative;
+    overflow: hidden;
+    height: 274px;
+    border-radius: 20px;
+  }
+
+  .carForm__img img {
+    position: absolute;
+    top: -20%;
+  }
+
   #form__card {
     padding: 150px 0 20px 0;
     display: flex;
@@ -178,6 +190,9 @@
     .container {
         padding: 0 15px;
     }
+    .carForms {
+      padding: 20px;
+    }
     .car__title {
       font-size: 48px;
     }
@@ -185,7 +200,11 @@
       flex-direction: column;
     }
     .car__block__right {
-      height: 360px;
+      height: 290px;
+      padding: 20px;
+    }
+    .car__block__btn {
+      justify-content: flex-start;
     }
     .car__block__right__h span{
       font-size: 48px;
@@ -220,6 +239,9 @@
     .car__perfectLeft {
       text-align: end;
     }
+    .car__perfectRight {
+      font-size: 16px;
+    }
 
     .carForm__title {
       flex-direction: column;
@@ -231,7 +253,8 @@
     #form__card {
       flex-direction: column;
     }
-    .carForms img {
+
+    .carForm__img {
       height: 152px;
     }
   }

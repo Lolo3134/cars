@@ -49,6 +49,21 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     };
   }, [startX, startScrollLeft, isDragging, handleMouseMove]);
 
+  const [activeSlideIndex, setActiveSlideIndex] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const index = Math.round(carouselRef.current!.scrollLeft / carouselRef.current!.clientWidth);
+      setActiveSlideIndex(index + 1);
+    };
+
+  carouselRef.current!.addEventListener('scroll', handleScroll);
+
+  return () => {
+    // carouselRef.current!.removeEventListener('scroll', handleScroll);
+  };
+  }, []);
+
   return (
     <>
       <div className={s.carousel} ref={carouselRef}>
@@ -58,7 +73,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
       <div className={s.container}>
         <div className={s.catalog__card__swiper}>
-          <p>03/24</p>
+          <p>{activeSlideIndex}/{items.length}</p>
           <div className={s.swiper__line}></div>
           <div className={s.swiper__btn}>
             <img onClick={() => handleArrowClick('left')} id="left" src='/arrow2.svg' className={s.i} />
