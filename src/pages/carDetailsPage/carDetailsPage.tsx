@@ -91,7 +91,9 @@ const CarDetailsPage: React.FC = () => {
             <input type="text" className={s.car__phone} placeholder='Phone' />
             <button className=''>Book your car</button>
           </form>
-          <img src="/carFormImg.png" alt="" />
+          <div className={s.carForm__img}>
+            <img src="/carFormImg.png" alt="" />
+          </div>
         </div>
       </div>
       <div className={s.more__cars}>
