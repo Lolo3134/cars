@@ -6,7 +6,7 @@
   margin: 40px auto 51px;
   gap: 50px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     margin: 30px 15px 0;
   }
 }
@@ -18,7 +18,7 @@
   line-height: 110%;
   color: #CEEF8F;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 1.5rem;
   }
 
@@ -37,7 +37,7 @@
   border: 1px solid var(--border);
   padding: 10px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 
@@ -88,7 +88,7 @@
 .mobile_nav {
   display: none;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 }

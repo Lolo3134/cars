@@ -6,7 +6,7 @@ $color_1: #fff;
     max-width: 1440px;
   }
   
-  @media (width <= 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -45,7 +45,7 @@ $color_1: #fff;
 	}
 }
 
-@media (width <= 1024px) {
+@media (max-width: 1024px) {
 	.footer__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -56,7 +56,7 @@ $color_1: #fff;
 	}
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
 	.footer__item {
 		height: 175px;
 		padding: 20px;

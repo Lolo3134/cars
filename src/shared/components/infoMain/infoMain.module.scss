@@ -9,7 +9,7 @@ $background-color_2: black;
     max-width: 1440px;
   }
   
-  @media (width <= 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -73,7 +73,7 @@ $background-color_2: black;
 		max-width: 28vw;
 	}
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
 	.car_none {
 		display: none;
 	}
@@ -84,7 +84,7 @@ $background-color_2: black;
 		}
 	}
 }
-@media (width <= 568px) {
+@media (max-width: 568px) {
 	.info__none {
 		display: block;
 	}
