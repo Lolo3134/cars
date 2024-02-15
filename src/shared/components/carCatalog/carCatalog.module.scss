@@ -4,7 +4,7 @@
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (max-max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -141,7 +141,7 @@
     border-radius: 50px;
   }
 
-  @media screen and (width >= 1920px) {
+  @media screen and (min-width: 1920px) {
     .car__catalog__title {
         font-size: 100px;
       }
@@ -151,13 +151,13 @@
       }
     }
   
-  @media screen and (width <= 900px) {
+  @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);
     }
   }
   
-  @media screen and (width <= 600px) {
+  @media screen and (max-width: 600px) {
     .car__catalog__title {
         font-size: 13vw;
         padding: 0 0 40px 20px;

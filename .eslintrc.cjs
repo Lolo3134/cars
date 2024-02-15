@@ -33,6 +33,8 @@ module.exports = {
     'react/prop-types': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
+    'media-query-list-comma-space-after': ['error', 'always', { severity: 'warning' }],
+    'media-feature-parentheses-space-inside': ['error', 'never', { severity: 'warning' }],
     //'no-param-reassign': 'off', // redux toolkit state change (for default immer setting)
   },
   settings: {

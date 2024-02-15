@@ -34,7 +34,7 @@ $color_1: #fff;
 	}
 }
 
-@media (width <= 1024px) {
+@media (max-width: 1024px) {
 	.carBlock__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -45,7 +45,7 @@ $color_1: #fff;
 	}
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
 	.carBlock__item {
 		height: 175px;
 		padding: 20px;

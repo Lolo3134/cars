@@ -130,7 +130,7 @@
   display: none !important;
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .slider__mob__arr {
     display: flex;
     justify-content: center;

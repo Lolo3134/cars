@@ -3,6 +3,7 @@
     display: inline-block;
     user-select: none;
   }
+    /* stylelint-disable-next-line rule-empty-line-before */
     .custom-select-wrapper select {
       display: none;
     }
@@ -54,7 +55,7 @@
       border-radius: 4px;
       box-sizing: border-box;
       /* stylelint-disable-next-line alpha-value-notation */
-      box-shadow: 0 2px 1px rgba(0,0,0,.07);
+      box-shadow: 0 2px 1px rgba(0,0, 0, 0.7);
       background: #fff;
       transition: all .4s ease-in-out;
       
