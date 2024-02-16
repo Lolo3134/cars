@@ -24,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--grey-100);
   line-height: 100%;
   padding: 20px 0 30px;
   border-top: 1px solid var(--border);
@@ -100,7 +100,7 @@
     align-items: flex-start;
 
     p {
-      color: var(--grey);
+      color: var(--grey-100);
       line-height: 135%;
     }
   }
@@ -126,7 +126,7 @@
   }
 
   span {
-    color: var(--grey);
+    color: var(--grey-100);
   }
 
   &::first-letter {
@@ -154,7 +154,7 @@
     }
 
     span {
-      color: var(--grey);
+      color: var(--grey-100);
     }
   }
 }

@@ -20,7 +20,8 @@
       "assets/*": ["assets/*"],
       "app/*": ["app/*"],
       "pages/*": ["pages/*"],
-      "shared/*": ["shared/*"]
+      "shared/*": ["shared/*"],
+      "modules/*": ["modules/*"]
     },
     "skipLibCheck": true,
   }

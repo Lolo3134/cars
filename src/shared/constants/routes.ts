@@ -1,6 +1,5 @@
 export enum Routes {
   Home = '/',
-  Registration = 'registration',
   Auth = 'auth',
   ResetPassword = 'reset-password',
   Profile = 'profile',
@@ -11,7 +10,6 @@ export enum Routes {
 export const routes = {
   // Аутентификация
   home: Routes.Home,
-  registration: '/' + Routes.Registration,
   auth: '/' + Routes.Auth,
 
   // Каталог

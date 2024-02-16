@@ -71,7 +71,7 @@
   }
 
   .car__block__right {
-    background-color: #CEEF8F;
+    background-color: var(--primary);
     border-radius: 20px;
     width: 100%;
     padding: 40px;
@@ -100,7 +100,7 @@
     padding: 19px 30px;
     background-color: #000;
     border-radius: 30px;
-    color: #CEEF8F;
+    color: var(--primary);
   }
 
   .car__perfect {
@@ -128,7 +128,7 @@
   }
 
   .carForms {
-    background-color: #CEEF8F;
+    background-color: var(--primary);
     color: #000;
     border-radius: 30px;
     padding: 40px;
@@ -176,7 +176,7 @@
   #form__card button {
     padding: 19px 60px;
     background-color: #000;
-    color: #CEEF8F;
+    color: var(--primary);
     border-radius: 30px;
     text-align: center;
     width: 100%;
