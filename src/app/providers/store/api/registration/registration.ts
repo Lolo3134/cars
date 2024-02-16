@@ -6,7 +6,6 @@ import {
   RegistrationApiResponse,
   VerifyApiProps
 } from 'app/providers/store/api/registration/registration.types';
-import { BaseQueryArg } from '@reduxjs/toolkit/dist/query/baseQueryTypes';
 
 export const registerApi = createApi({
   reducerPath: 'registerApi',

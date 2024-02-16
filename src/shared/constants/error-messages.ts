@@ -9,7 +9,7 @@ export const ERROR_MESSAGES = {
   ONLY_LETTERS_NUMBERS_DASH: 'Только цифры, заглавные/строчные буквы и символ "-"',
   ONLY_LETTERS_NUMBERS_DASH_SLASH: 'Только цифры, заглавные/строчные буквы и символы "-" и "/"',
   ONLY_LETTERS_NUMBERS_DASH_DOT: 'Только цифры, заглавные/строчные буквы и символы "-" и "."',
-  REQUIRED_FIELD: 'Поле обязательное',
+  REQUIRED_FIELD: 'field required',
   INCORRECT_DATE: 'Некорректная дата',
   PHONE_NUMBER: 'Номер должен начинаться с 9 и содержать 10 цифр',
   INCORRECT_EMAIL: 'Неверный формат почты',

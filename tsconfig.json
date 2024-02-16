@@ -21,7 +21,8 @@
       "app/*": ["app/*"],
       "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
-      "modules/*": ["modules/*"],
-    }
+      "modules/*": ["modules/*"]
+    },
+    "skipLibCheck": true,
   }
 }

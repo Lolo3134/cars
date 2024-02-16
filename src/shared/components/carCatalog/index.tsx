@@ -1,19 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../сard';
 import s from './carCatalog.module.scss';
-
-interface Item {
- id: number;
- image: string;
- category: string;
- seats: string;
- mpg: string;
- model: string;
- price: string;
-}
-
+import { Car } from 'shared/components/carCatalog/car-catalog.types';
 interface CarouselProps {
- items: Item[];
+ items: Car[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
@@ -59,6 +49,21 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     };
   }, [startX, startScrollLeft, isDragging, handleMouseMove]);
 
+  const [activeSlideIndex, setActiveSlideIndex] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const index = Math.round(carouselRef.current!.scrollLeft / carouselRef.current!.clientWidth);
+      setActiveSlideIndex(index + 1);
+    };
+
+  carouselRef.current!.addEventListener('scroll', handleScroll);
+
+  return () => {
+    // carouselRef.current!.removeEventListener('scroll', handleScroll);
+  };
+  }, []);
+
   return (
     <>
       <div className={s.carousel} ref={carouselRef}>
@@ -68,11 +73,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
       <div className={s.container}>
         <div className={s.catalog__card__swiper}>
-          <p>03/24</p>
+          <p>{activeSlideIndex}/{items.length}</p>
           <div className={s.swiper__line}></div>
           <div className={s.swiper__btn}>
-            <img onClick={() => handleArrowClick('left')} id="left" src='/arrow2.svg' className={s.i +  s.catalog__left} />
-            <img onClick={() => handleArrowClick('right')} id="right" src='/arrow1.svg' className={s.i + s.catalog__right} />
+            <img onClick={() => handleArrowClick('left')} id="left" src='/arrow2.svg' className={s.i} />
+            <img onClick={() => handleArrowClick('right')} id="right" src='/arrow1.svg' className={s.i} />
           </div>
         </div>
       </div>
@@ -80,8 +85,12 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   );
 };
 
-const Catalog: React.FC = () => {
-  const items: Item[] = [
+interface NameProps {
+  name: string;
+}
+
+const Catalog: React.FC<NameProps> = ({ name }) => {
+  const items: Car[] = [
     {
       id: 1,
       image: '/images/img-1.svg',
@@ -141,7 +150,7 @@ const Catalog: React.FC = () => {
   return (
     <section className={s.catalog}>
       <div className={s.wrapper}>
-        <h1 className={s.car__catalog__title}>Car catalog</h1>
+        <h1 className={s.car__catalog__title}>{name}</h1>
         <Carousel items={items} />
       </div>
     </section>

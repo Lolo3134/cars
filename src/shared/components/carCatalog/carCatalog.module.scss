@@ -4,14 +4,10 @@
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (max-max-width: 768px) {
     .container {
         padding: 0 15px;
     }
-  }
-  
-
-.catalog {
   }
   
   .wrapper {
@@ -27,16 +23,18 @@
     padding: 0 0 60px;
   }
 
-  .wrapper .i {
+
+
+  .i {
     height: 12px;
     width: 36px;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 23%);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
   }
 
-  .wrapper .i:active{
+  .i:active{
     transform: translateY(-50%) scale(0.85);
   }
   
@@ -138,18 +136,28 @@
     margin-top: 40px;
     max-width: 130px;
     padding: 20px 40px;
-    background-color: #A4C8FF;
+    background-color: var(--primary);
     color: black;
     border-radius: 50px;
   }
+
+  @media screen and (min-width: 1920px) {
+    .car__catalog__title {
+        font-size: 100px;
+      }
+
+      .wrapper .carousel{
+        grid-auto-columns: calc(20%);
+      }
+    }
   
-  @media screen and (width <= 900px) {
+  @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);
     }
   }
   
-  @media screen and (width <= 600px) {
+  @media screen and (max-width: 600px) {
     .car__catalog__title {
         font-size: 13vw;
         padding: 0 0 40px 20px;

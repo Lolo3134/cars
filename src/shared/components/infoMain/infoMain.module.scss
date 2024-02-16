@@ -1,6 +1,6 @@
 $color_1: #000;
-$color_2: #A4C8FF;
-$background-color_1: #A4C8FF;
+$color_2: var(--primary);
+$background-color_1: var(--primary);
 $background-color_2: black;
 
 .container {
@@ -9,7 +9,7 @@ $background-color_2: black;
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -73,7 +73,7 @@ $background-color_2: black;
 		max-width: 28vw;
 	}
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
 	.car_none {
 		display: none;
 	}
@@ -84,7 +84,7 @@ $background-color_2: black;
 		}
 	}
 }
-@media (width <= 568px) {
+@media (max-width: 568px) {
 	.info__none {
 		display: block;
 	}
@@ -97,6 +97,9 @@ $background-color_2: black;
 	.info__block__right__images {
 		flex-wrap: wrap;
 		padding-top: 150px;
+	}
+	.info__block__right p {
+		padding: 20px 0 0 0;
 	}
 	.info__container {
 		padding: 20px;

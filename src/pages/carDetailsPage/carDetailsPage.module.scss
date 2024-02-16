@@ -1,0 +1,262 @@
+.container {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1440px;
+  }
+
+
+  .car__title {
+    font-size: 7vw;
+    padding-top: 60px;
+    margin-bottom: -100px;
+  }
+
+  @media (min-width: 1920px) {
+    .car__title {
+      font-size: 100px;
+    }
+  }
+
+  .car__img {
+    border-radius: 20px;
+  }
+
+  .car__tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .car__tag {
+    padding: 9px 20px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  
+  .car__blocks {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .car__block__left {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #000;
+    border: 1px #FFFFFF40 solid;
+    padding: 54px 40px 40px 40px;
+  }
+
+  .car__block__infoLeft {
+    color: #FFFFFF40;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .car__block__infoLeft p{
+    margin-top: 20px;
+  }
+
+  .car__block__infoRight {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .car__block__infoRight p {
+    margin-top: 15px;
+  }
+
+  .car__block__right {
+    background-color: var(--primary);
+    border-radius: 20px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 476px;
+  }
+
+  .car__block__right__h span{
+    font-size: 100px;
+    color: #000;
+  }
+
+  .car__block__right__h {
+    font-size: 24px;
+    color: #000;
+  }
+
+  .car__block__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .car__block__btn p {
+    padding: 19px 30px;
+    background-color: #000;
+    border-radius: 30px;
+    color: var(--primary);
+  }
+
+  .car__perfect {
+    display: flex;
+    padding: 160px 0;
+    justify-content: space-between;
+  }
+
+  .car__perfectRight {
+    max-width: 640px;
+    font-size: 24px;
+  }
+
+  .car__perfect__title {
+    color: #fff;
+    font-size: 7vw;
+    max-width: 1153px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: 1920px) {
+    .car__perfect__title {
+      font-size: 100px;
+    }
+  }
+
+  .carForms {
+    background-color: var(--primary);
+    color: #000;
+    border-radius: 30px;
+    padding: 40px;
+  }
+
+  .carForm__title {
+    display: flex;
+  }
+
+  .carForm__title h1 {
+    font-size: 100px;
+  }
+
+  .carForm__title p {
+    font-size: 24px;
+    max-width: 400px;
+  }
+
+  .carForm__img {
+    position: relative;
+    overflow: hidden;
+    height: 274px;
+    border-radius: 20px;
+  }
+
+  .carForm__img img {
+    position: absolute;
+    top: -20%;
+  }
+
+  #form__card {
+    padding: 150px 0 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  #form__card input {
+    padding: 19px 30px;
+    border: 1px #000 solid;
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  #form__card button {
+    padding: 19px 60px;
+    background-color: #000;
+    color: var(--primary);
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .more__cars {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    .carForms {
+      padding: 20px;
+    }
+    .car__title {
+      font-size: 48px;
+    }
+    .car__blocks {
+      flex-direction: column;
+    }
+    .car__block__right {
+      height: 290px;
+      padding: 20px;
+    }
+    .car__block__btn {
+      justify-content: flex-start;
+    }
+    .car__block__right__h span{
+      font-size: 48px;
+    }
+    .car__block__right__h {
+      font-size: 16px;
+    }
+    .car__block__left {
+      align-items: flex-start;
+      gap: 10px;
+      padding: 20px;
+    }
+    .car__block__infoRight p {
+      font-size: 20px;
+      margin-top: 2px;
+    }
+    .car__block__infoLeft p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+
+    .car__perfect {
+      flex-direction: column;
+      gap: 114px;
+      padding: 110px 0;
+    }
+    .car__perfect__title {
+      font-size: 48px;
+      padding-top: 100px;
+    }
+    .car__perfectLeft {
+      text-align: end;
+    }
+    .car__perfectRight {
+      font-size: 16px;
+    }
+
+    .carForm__title {
+      flex-direction: column;
+    }
+    .carForm__title h1{
+      font-size: 46px;
+      padding-bottom: 20px;
+    }
+    #form__card {
+      flex-direction: column;
+    }
+
+    .carForm__img {
+      height: 152px;
+    }
+  }
+
+  

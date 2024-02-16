@@ -7,7 +7,7 @@ $color_2: #FFF6;
     max-width: 1440px;
   }
   
-  @media (max-width <= 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -17,41 +17,76 @@ $color_2: #FFF6;
 #contact {
 	padding: 150px 0;
 }
+
 .contact__block {
 	max-width: 1360px;
 	display: flex;
 	justify-content: space-between;
 	color: $color_1;
 }
+
 .contact__block__left {
 	display: grid;
 	align-content: space-between;
+
 	h1 {
 		font-size: 40px;
 	}
+
 	p {
 		font-size: 16px;
 	}
+
+	a {
+		font-size: 16px;
+		color: $color_1;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
 }
+
 .contact__block__right {
 	font-size: 4.5vw;
+
 	p {
 		color: $color_2;
 	}
+
+	a {
+		display: none;
+		text-decoration: none;
+		color: $color_1;
+	}
+
 }
-h1 {
-	p {
-		font-size: 4.5vw;
+
+@media (min-width: 1920px) {
+
+	.contact__block__right {
+		font-size: 64px;
 	}
 }
-@media (width <= 768px) {
+
+@media (max-width: 768px) {
 	#contact {
 		padding: 80px 0;
 	}
+
 	.contact__block__left {
 		display: none;
 	}
+
 	.contact__block__right {
 		font-size: 24px;
+
+		a {
+			display: block;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
 	}
 }

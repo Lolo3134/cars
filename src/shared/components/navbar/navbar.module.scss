@@ -13,7 +13,7 @@
 
 .logo {
   font-size: 2.5rem;
-  color: var(--white);
+  color: var(--primary);
   text-decoration: none;
   line-height: 110%;
 
@@ -52,7 +52,7 @@
       line-height: 135%;
 
       &:hover {
-        color: var(--blue);
+        color: var(--primary);
       }
     }
   }
@@ -71,7 +71,7 @@
     }
 
     .auth {
-      background: var(--blue);
+      background: var(--primary);
       border-radius: 50px;
       padding: 9px 20px;
       display: flex;

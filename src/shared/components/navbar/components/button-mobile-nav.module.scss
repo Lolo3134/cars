@@ -33,6 +33,7 @@
   &.menu_toggle_bar__top {
     transform: translate(-35%, -4px);
   }
+
   &.menu_toggle_bar__bottom {
     transform: translate(-35%, 4px);
   }
@@ -41,6 +42,7 @@
     &.menu_toggle_bar__top {
       transform: translate(-35%, 0) rotate(45deg);
     }
+
     &.menu_toggle_bar__bottom {
       transform: translate(-35%, 0) rotate(-45deg);
     }

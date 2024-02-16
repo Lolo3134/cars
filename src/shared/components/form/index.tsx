@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import s from './form.module.scss';
-import { RegistrationForm, VerificationForm } from 'modules/user';
+import { RegistrationForm } from 'modules/user';
+import { AuthForm } from 'modules/user/auth-form';
 
 export const FormAuth:FC = () => {
   const [activeButton, setActiveButton] = useState(2);
@@ -30,6 +31,10 @@ export const FormAuth:FC = () => {
           </div>
           {activeButton === 1 &&
             <RegistrationForm />
+          }
+          {
+            activeButton === 2 &&
+            <AuthForm />
           }
         </div>
       </div>
