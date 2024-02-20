@@ -10,15 +10,17 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ item }) => {
   return (
     <div className={s.card}>
-      <img src={item.image} alt="img" draggable="false" />
+      <img src={item.photos} alt="img" draggable="false" />
       <div className={s.card__categories}>
-        <p>{item.category}</p>
-        <p>{item.seats}</p>
-        <p>{item.mpg}</p>
+        {item.specifications.map((specification, index) => (
+          <p key={index}>
+            {specification.value} {specification.name}
+          </p>
+        ))}
       </div>
-      <h2>{item.model}</h2>
+      <h2>{item.brand} {item.car_model}</h2>
       <span>From $ {item.price} per day</span>
-      <Link to={`/cars/${item.id}`}>
+      <Link to={`/cars/${item.car_id}`}>
         <button className={s.catalog__btn}>Select</button>
       </Link>
     </div>
