@@ -6,9 +6,12 @@
     justify-content: space-between;
   }
   
-  @media (max-max-width: 768px) {
+  @media (max-width: 768px) {
     .container {
         padding: 0 15px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        
     }
   }
 
@@ -46,11 +49,25 @@
     border: 1px solid #191919;
     background: #191919;
     border-radius: 50px;
-    width: 100%;
+    min-width: 280px;
     height: 60px;
     padding: 19px 0 19px 30px;
   }
   
+
+  @media (max-width: 768px) {
+    .user__container {
+  flex-wrap: wrap;      
+  padding-top: 40px;  
+    }
+  }
+
+  // @media (max-width: 550px) {
+  //   .user__contacts {
+  //     width: auto;
+  //   }
+  // }
+
   .car__container {
     border: 1px solid #FFFFFF40;
     border-radius: 30px;
@@ -80,6 +97,13 @@
     height: 60px;
     padding: 19px 0 19px 30px;
     max-width: 417px;
+  }
+
+  
+  @media (max-width: 550px) {
+    .car__info__inputs {
+      grid-template-columns: 1fr;
+    }
   }
 
   .photo__container {
@@ -169,12 +193,25 @@
     cursor: pointer;
   }
 
+  @media (max-width: 550px) {
+    .photo__download {
+      flex-direction: column;
+      border-radius: 30px;
+      gap: 20px;
+    }
+    .photo__download input {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+
 
 
   .admin__change {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    padding-bottom: 60px;
   }
 
   .admin__change button {
@@ -190,6 +227,13 @@
   .make {
     background-color: #CEEF8F;
     color: #000;
+  }
+
+
+  @media (max-width: 550px) {
+    .admin__change {
+      flex-direction: column;
+    }
   }
 
   .admin__nav {
