@@ -8,7 +8,7 @@ export const carApi = createApi({
       query: () => 'cars/',
     }),
     getCar: builder.query({
-      query: (car_id) => `cars/${car_id}`,
+      query: (car_id) => `cars/${car_id}/`,
     }),
   }),
 });

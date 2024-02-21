@@ -28,7 +28,7 @@ const CarDetailsPage: React.FC = () => {
           <h1>Book your perfect car</h1>
         </div>
       </div>
-      <Slider images={['/slider1.png', '/slider2.png', '/slider3.png']} />
+      <Slider images={car.photos.slice(1)} />
       <div className={s.container}>
         <div className={s.car__tags}>
           <div className={s.car__tag}>Premium Gas Only</div>
