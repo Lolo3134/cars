@@ -4,7 +4,8 @@ export enum Routes {
   ResetPassword = 'reset-password',
   Profile = 'profile',
   Catalog = 'catalog',
-  CarPage = 'cars/:carId'
+  CarPage = 'cars/:carId',
+  Admin = 'admin'
 }
 
 export const routes = {
@@ -21,4 +22,7 @@ export const routes = {
   // Профиль
   profile: '/' + Routes.Profile,
   resetPassword: '/' + Routes.ResetPassword,
+
+  // Админ
+  admin: '/' + Routes.Admin,
 };
