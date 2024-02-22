@@ -4,7 +4,7 @@ export enum Routes {
   ResetPassword = 'reset-password',
   Profile = 'profile',
   Catalog = 'catalog',
-  CarPage = 'cars/:car_id'
+  CarPage = 'cars/:car_id',
   Admin = 'admin'
 }
 
