@@ -5,6 +5,7 @@ export enum Routes {
   Profile = 'profile',
   Catalog = 'catalog',
   CarPage = 'cars/:car_id'
+  Admin = 'admin'
 }
 
 export const routes = {
@@ -21,4 +22,7 @@ export const routes = {
   // Профиль
   profile: '/' + Routes.Profile,
   resetPassword: '/' + Routes.ResetPassword,
+
+  // Админ
+  admin: '/' + Routes.Admin,
 };
