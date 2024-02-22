@@ -1,7 +1,9 @@
+// @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../сard';
 import s from './carCatalog.module.scss';
 import { Car } from 'shared/components/carCatalog/car-catalog.types';
+import { useGetCarsQuery } from 'app/providers/store/api/catalog/catalog';
 interface CarouselProps {
  items: Car[];
 }
@@ -90,62 +92,15 @@ interface NameProps {
 }
 
 const Catalog: React.FC<NameProps> = ({ name }) => {
-  const items: Car[] = [
-    {
-      id: 1,
-      image: '/images/img-1.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-    {
-      id: 2,
-      image: '/images/img-2.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-    {
-      id: 3,
-      image: '/images/img-3.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-    {
-      id: 4,
-      image: '/images/img-4.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-    {
-      id: 5,
-      image: '/images/img-5.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-    {
-      id: 6,
-      image: '/images/img-6.svg',
-      category: 'Manual',
-      seats: '5 Seats',
-      mpg: '34 MPG',
-      model: 'Toyota New Yaris',
-      price: '22.47',
-    },
-  ];
+  const { data: items, error, isLoading } = useGetCarsQuery();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <section className={s.catalog}>

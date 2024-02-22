@@ -1,10 +1,10 @@
 export interface Car {
-  id: number;
-  image: string;
+  car_id: number;
+  photos: [];
   category: string;
   seats: string;
   mpg: string;
-  model: string;
-  price: string;
+  car_model: string;
+  price: number;
   brand?: string;
 }

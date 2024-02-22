@@ -1,5 +1,7 @@
+// @ts-nocheck
 import React from 'react';
-// import { Car } from 'shared/components/carCatalog/car-catalog.types';
+import { useParams } from 'react-router-dom';
+import { useGetCarQuery } from 'app/providers/store/api/catalog/catalog';
 import s from './carDetailsPage.module.scss';
 import CarBlock from 'shared/components/carBlock';
 import ContactMain from 'shared/components/contactMain';
@@ -7,19 +9,19 @@ import Footer from 'shared/components/footer';
 import Catalog from 'shared/components/carCatalog';
 import Slider from 'shared/components/carSlider';
 
-// const car: Car = 
-//   {
-//     id: 1,
-//     image: '/images/img-1.svg',
-//     category: 'Manual',
-//     seats: '5 Seats',
-//     mpg: '34 MPG',
-//     model: 'Toyota New Yaris',
-//     price: '22.47',
-//     brand: 'Toyota',
-//   };
-
 const CarDetailsPage: React.FC = () => {
+
+  const { car_id } = useParams();
+  const { data: car, error, isLoading } = useGetCarQuery(car_id);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <>
       <div className={s.container}>
@@ -27,7 +29,7 @@ const CarDetailsPage: React.FC = () => {
           <h1>Book your perfect car</h1>
         </div>
       </div>
-      <Slider images={['/slider1.png', '/slider2.png', '/slider3.png']} />
+      <Slider images={car.photos.slice(1)} />
       <div className={s.container}>
         <div className={s.car__tags}>
           <div className={s.car__tag}>Premium Gas Only</div>
@@ -61,7 +63,7 @@ const CarDetailsPage: React.FC = () => {
           </div>
 
           <div className={s.car__block__right}>
-            <h1 className={s.car__block__right__h}><span>$ 22.95</span>per day</h1>
+            <h1 className={s.car__block__right__h}><span>$ {car.price}</span>per day</h1>
             <div className={s.car__block__btn}>
               <p>Book your car</p>
             </div>
